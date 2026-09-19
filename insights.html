@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insights | Chinmay Sahu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particles-canvas"></canvas>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand" aria-label="Home"><span class="brand-mark">C</span><span>Chinmay Sahu</span></a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a>
+          <a href="philosophy.html">Philosophy</a><a href="research.html">Research</a>
+          <a href="case-studies.html">Case Studies</a><a href="achievements.html">Achievements</a>
+          <a class="active" href="insights.html">Insights</a><a href="contact.html">Contact</a>
+        </nav>
+        <a class="nav-cta" href="contact.html">Connect</a>
+        <button class="mobile-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </header>
+    <main>
+      <section class="page-hero">
+        <div class="container page-hero-inner">
+          <span class="kicker">Insights</span>
+          <h1>Latest Perspectives</h1>
+          <p>Thoughtful, educational content around wealth, risk, investment and market behaviour.</p>
+        </div>
+      </section>
+      <section>
+        <div class="container blog-grid stagger">
+          <article class="blog-card reveal">
+            <div class="blog-thumb" style="background-image: url('https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="blog-body">
+              <span>Protection</span>
+              <h3>Why Wealth Management Starts With Protection</h3>
+              <p>How safeguarding financial foundations creates room for sustainable growth.</p>
+            </div>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-thumb" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="blog-body">
+              <span>Portfolio</span>
+              <h3>Understanding Risk Before Chasing Returns</h3>
+              <p>Without a clear risk framework, return goals become difficult to defend.</p>
+            </div>
+          </article>
+          <article class="blog-card reveal">
+            <div class="blog-thumb" style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?auto=format&fit=crop&w=1200&q=80');"></div>
+            <div class="blog-body">
+              <span>Markets</span>
+              <h3>Technical Analysis: Understanding Market Structure</h3>
+              <p>Learning to distinguish trend quality, support zones, and momentum shifts.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer-inner">
+        <div>© <span id="year"></span> Chinmay Sahu</div>
+        <div>Educational content and market commentary.</div>
+      </div>
+    </footer>
+    <nav class="mobile-bottom-nav" aria-label="Quick navigation">
+      <a href="index.html"><span>⌂</span><small>Home</small></a>
+      <a href="services.html"><span>▣</span><small>Portfolio</small></a>
+      <a class="active" href="insights.html"><span>⌁</span><small>Insights</small></a>
+      <a href="contact.html"><span>♙</span><small>Profile</small></a>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
