@@ -48,13 +48,36 @@ const yearNode = document.getElementById('year');
 if (yearNode) yearNode.textContent = new Date().getFullYear();
 
 // ── Form Handler ───────────────────────────────────────────
-const form = document.querySelector('form');
+const form = document.getElementById('contactForm') || document.querySelector('form');
 if (form) {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+    
+    // Get form values
+    const name = document.getElementById('senderName')?.value || '';
+    const email = document.getElementById('senderEmail')?.value || '';
+    const subject = document.getElementById('messageSubject')?.value || 'New Inquiry';
+    const message = document.getElementById('messageBody')?.value || '';
+    
+    // Construct email parameters
+    const emailTo = 'wealthmanagercs@gmail.com';
+    const emailSubject = encodeURIComponent(`Website Inquiry: ${subject}`);
+    const emailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    
+    // Construct WhatsApp message
+    const waNumber = '916232552467';
+    const waText = encodeURIComponent(`Hello Chinmay,\n\nI am ${name} (${email}).\n\nSubject: ${subject}\n\n${message}`);
+    
+    // 1. Open WhatsApp in a new tab
+    window.open(`https://wa.me/${waNumber}?text=${waText}`, '_blank');
+    
+    // 2. Trigger Email client in the same window (to avoid popup blockers)
+    window.location.href = `mailto:${emailTo}?subject=${emailSubject}&body=${emailBody}`;
+    
+    // Update button UI
     const button = form.querySelector('button');
     if (button) {
-      button.textContent = '✓ Message Sent';
+      button.textContent = '✓ Redirecting...';
       button.disabled = true;
       button.style.opacity = '0.7';
     }

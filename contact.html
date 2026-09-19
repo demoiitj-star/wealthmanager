@@ -127,11 +127,11 @@
 
           <div class="form-shell reveal">
             <h2>Send a Message</h2>
-            <form>
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Email address" />
-              <input type="text" placeholder="Subject" />
-              <textarea rows="5" placeholder="Tell me about your goals"></textarea>
+            <form id="contactForm">
+              <input type="text" id="senderName" placeholder="Your Name" required />
+              <input type="email" id="senderEmail" placeholder="Email address" required />
+              <input type="text" id="messageSubject" placeholder="Subject" />
+              <textarea id="messageBody" rows="5" placeholder="Tell me about your goals" required></textarea>
               <button class="btn btn-primary" type="submit">Send Inquiry <span class="arrow">→</span></button>
             </form>
           </div>
